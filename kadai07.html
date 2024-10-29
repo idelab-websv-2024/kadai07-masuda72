@@ -5,7 +5,7 @@
     <title></title>
 
     <script>
-    // https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/#searchexamples
+    //https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/#searchexamples
 
     function searchCallback(result) {
       output = document.getElementById('outputArea');
@@ -14,7 +14,8 @@
         var oneline = document.createElement('div');
         oneline.innerHTML = r["collectionName"];
 		oneline.innerHTML += "<br>";
-		oneline.innerHTML += r["artistName"];
+    oneline.innerHTML += r["country"]
+		//oneline.innerHTML += r["artistName"];
 		oneline.innerHTML += "<hr />";
 		output.appendChild(oneline);
       }
@@ -27,8 +28,7 @@
 <div id='status'></div>
 <div id='outputArea'></div>
 
-<script id=caller src='https://itunes.apple.com/search?term=手嶌&lang=ja_JP&callback=searchCallback'></script>
-
+<script id=caller src='https://itunes.apple.com/search?term=artistName&lang=ja_JP&callback=searchCallback'></script>
   </body>
 </html>
 
